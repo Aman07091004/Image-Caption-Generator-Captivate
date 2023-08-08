@@ -179,7 +179,7 @@ if __name__ == "__main__":
     BASE_DIR = r"G:\My Drive\ICG_CNN_LSTM_Project\BASE"
     WORKING_DIR = r"G:\My Drive\ICG_CNN_LSTM_Project\WORKING"
 
-    tokenizer_path = r"Download and upload the tokenizer file from the link given in README.md file and use that path here."
+    tokenizer_path = "tokenizer.pkl"
     mapping_path = "mapping.pkl"
     features_path = "features.pkl"
 
