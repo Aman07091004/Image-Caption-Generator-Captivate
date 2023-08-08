@@ -12,7 +12,7 @@ from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
 from PIL import Image
-model_path = r"Download and upload the model file from the link given in README.md file and use that path here."
+model_path = "best_model.h5"
 
 openai.api_key = "your_api_key"
 
@@ -180,8 +180,8 @@ if __name__ == "__main__":
     WORKING_DIR = r"G:\My Drive\ICG_CNN_LSTM_Project\WORKING"
 
     tokenizer_path = r"Download and upload the tokenizer file from the link given in README.md file and use that path here."
-    mapping_path = r"Download and upload the mapping file from the link given in README.md file and use that path here."
-    features_path = r"Download and upload the features file from the link given in README.md file and use that path here."
+    mapping_path = "mapping.pkl"
+    features_path = "features.pkl"
 
     # Load the tokenizer and mapping
     with open(tokenizer_path, "rb") as f:
