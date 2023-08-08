@@ -171,7 +171,7 @@ def main():
 
 if __name__ == "__main__":
 
-    model_path = r"G:\My Drive\ICG_CNN_LSTM_Project\WORKING\best_model.h5"
+    model_path = "best_model.h5"
 
     # Load the model
     model = load_model(model_path)
