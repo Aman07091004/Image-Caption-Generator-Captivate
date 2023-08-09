@@ -200,13 +200,10 @@ if __name__ == "__main__":
     vgg_model = VGG16()
     vgg_model = tf.keras.Model(inputs=vgg_model.input, outputs=vgg_model.layers[-2].output)
     
-    def custom_optimizer(learning_rate):
-        return tf.keras.optimizers.Adam(learning_rate=learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
-
-    # Set your learning rate and weight decay values
-    learning_rate = 0.001
+    def custom_optimizer():
+        return tf.keras.optimizers.Adam(beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 
     # Compile the model with the custom optimizer
-    model.compile(optimizer=custom_optimizer(learning_rate), loss="categorical_crossentropy", metrics=["accuracy"])
+    model.compile(optimizer=custom_optimizer(), loss="categorical_crossentropy", metrics=["accuracy"])
 
 main()
