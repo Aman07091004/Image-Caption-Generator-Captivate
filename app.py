@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 model_path = "best_model.h5"
 
-openai.api_key = "your_api_key"
+openai.api_key = "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"
 
 def idx_to_word(integer, tokenizer):
     """
@@ -199,5 +199,8 @@ if __name__ == "__main__":
     # Load the VGG16 model
     vgg_model = VGG16()
     vgg_model = tf.keras.Model(inputs=vgg_model.input, outputs=vgg_model.layers[-2].output)
+    
+    optimizer = tf.keras.optimizers.Adam(learning_rate = 0.001, decay = 1e-6)
+    model.compile(optimizer = optimizer, loss = "categorical_crossentropy", metrics=["accuracy"])
 
 main()
