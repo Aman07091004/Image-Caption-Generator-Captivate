@@ -172,9 +172,12 @@ def main():
 if __name__ == "__main__":
 
     model_path = "best_model.h5"
+    
+    curr_dir = os.getcwd()
+    file_name = os.path.join(curr_dir, model_path)
 
     # Load the model
-    model = load_model(model_path)
+    model = load_model(file_name)
 
     BASE_DIR = r"G:\My Drive\ICG_CNN_LSTM_Project\BASE"
     WORKING_DIR = r"G:\My Drive\ICG_CNN_LSTM_Project\WORKING"
