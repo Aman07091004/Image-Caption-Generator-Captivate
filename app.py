@@ -14,7 +14,7 @@ import numpy as np
 from PIL import Image
 model_path = "best_model.h5"
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 
 def idx_to_word(integer, tokenizer):
     """
