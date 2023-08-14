@@ -1,3 +1,12 @@
+---
+title: Captivate
+emoji: 🤗
+colorFrom: yellow
+colorTo: orange
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
 
 # Image-Caption Generator
 
